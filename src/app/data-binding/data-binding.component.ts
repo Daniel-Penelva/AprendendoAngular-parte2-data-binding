@@ -14,6 +14,8 @@ export class DataBindingComponent implements OnInit {
 
   cursoAngular: boolean = true;
 
+  valorAtual: String = '';
+
   getValor() {
     return 1;
   }
@@ -26,9 +28,9 @@ export class DataBindingComponent implements OnInit {
     alert('Botão clicado!');
   }
 
-  // No console mostra o que está sendo digitado
+  // Mostrar no template através da variavel valorAtual
   onKeyUp(evento: KeyboardEvent) {
-    console.log((<HTMLInputElement>evento.target).value);
+     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
 
   constructor() {}
