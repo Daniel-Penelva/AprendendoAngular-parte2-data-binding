@@ -1,4 +1,4 @@
-<section class="property-binding">
+<section class="event-binding">
   <!--<article>
       <h3>Interpolation / Interpolação</h3>
       <p>String rendenrizada com interpolação: {{ url }}</p>
@@ -14,7 +14,7 @@
        <img bind-src="urlImage">
       </article> -->
 
-  <article>
+ <!-- <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
@@ -24,22 +24,34 @@
         <option value="alert-warning">Alerta</option>
         <option value="alert-danger">Erro</option>
       </select>
-      <br><br>
+      <br><br> -->
 
       <!-- Classe Binding com interpolação {{}} -->
-      <div class="alert {{ classe.value}}" role="alert">
+      <!--<div class="alert {{ classe.value}}" role="alert">
         Texto colorido conforme valor do combobox.
       </div>
 
       <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">Sucesso</div>
       <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">Info</div>
       <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
-      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>-->
 
       <!-- Utilizando o Style de classe binding -->
-      <div class="alert alert-danger" role="alert" 
+      <!--<div class="alert alert-danger" role="alert" 
       [style.display] = "classe.value == 'alert-danger' ? 'block': 'none'">Esse texo só irá aparecer em caso de erro.</div>
 
+    </div>
+  </article>-->
+
+  <article>
+    <h3>Event-Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">Me Clique!</button>
+
+      <br><br>
+
+      <!-- Passando os eventos para o método -->
+      <input type="text" (keyup)="onKeyUp($event)"/>
     </div>
   </article>
 </section>
