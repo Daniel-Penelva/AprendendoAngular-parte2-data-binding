@@ -14,7 +14,7 @@
        <img bind-src="urlImage">
       </article> -->
 
- <!-- <article>
+  <!-- <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
@@ -26,8 +26,8 @@
       </select>
       <br><br> -->
 
-      <!-- Classe Binding com interpolação {{}} -->
-      <!--<div class="alert {{ classe.value}}" role="alert">
+  <!-- Classe Binding com interpolação {{}} -->
+  <!--<div class="alert {{ classe.value}}" role="alert">
         Texto colorido conforme valor do combobox.
       </div>
 
@@ -36,8 +36,8 @@
       <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
       <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>-->
 
-      <!-- Utilizando o Style de classe binding -->
-      <!--<div class="alert alert-danger" role="alert" 
+  <!-- Utilizando o Style de classe binding -->
+  <!--<div class="alert alert-danger" role="alert" 
       [style.display] = "classe.value == 'alert-danger' ? 'block': 'none'">Esse texo só irá aparecer em caso de erro.</div>
 
     </div>
@@ -46,14 +46,21 @@
   <article>
     <h3>Event-Binding</h3>
     <div>
-      <button (click)="botaoClicado()" class="btn btn-primary">Me Clique!</button>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Me Clique!
+      </button>
 
-      <br><br>
+      <br /><br />
 
       <!-- Passando os eventos para o método -->
-      <input type="text" (keyup)="onKeyUp($event)"/>
+      <input
+        type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor($event)"
+      />
 
       <p>Valor Atual: {{ valorAtual }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
     </div>
   </article>
 </section>

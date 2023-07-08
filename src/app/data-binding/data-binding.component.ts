@@ -15,6 +15,7 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true;
 
   valorAtual: String = '';
+  valorSalvo: string = '';
 
   getValor() {
     return 1;
@@ -30,7 +31,11 @@ export class DataBindingComponent implements OnInit {
 
   // Mostrar no template através da variavel valorAtual
   onKeyUp(evento: KeyboardEvent) {
-     this.valorAtual = (<HTMLInputElement>evento.target).value;
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  salvarValor(valor:any) {
+    this.valorSalvo = valor.target.value;
   }
 
   constructor() {}
