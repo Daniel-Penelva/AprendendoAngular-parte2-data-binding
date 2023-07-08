@@ -36,6 +36,10 @@
       <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
       <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
 
+      <!-- Utilizando o Style de classe binding -->
+      <div class="alert alert-danger" role="alert" 
+      [style.display] = "classe.value == 'alert-danger' ? 'block': 'none'">Esse texo só irá aparecer em caso de erro.</div>
+
     </div>
   </article>
 </section>
