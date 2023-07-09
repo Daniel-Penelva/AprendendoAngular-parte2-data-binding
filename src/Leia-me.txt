@@ -34,3 +34,15 @@ será passado para a propriedade nome do componente AppCurso.
 
 Essa capacidade de receber valores externos é uma das principais características do Angular e é usada para criar 
 componentes reutilizáveis e flexíveis, permitindo a comunicação entre os componentes por meio de propriedades de entrada.
+
+-------- // ---------
+
+A anotação @Input('nome') é um decorador que marca a propriedade nomeCurso como uma propriedade de entrada. O argumento 
+'nome' dentro do decorador @Input() é conhecido como alias de entrada (input alias).
+
+O alias de entrada permite que você defina um nome personalizado para a propriedade de entrada que é diferente do nome 
+real da propriedade no componente. No exemplo, o nome real da propriedade é nomeCurso, mas o alias de entrada é definido 
+como 'nome'.
+
+Ao usar o alias de entrada, você pode usar o nome personalizado ao passar valores para a propriedade no componente, tanto 
+no HTML quanto em outros componentes que utilizam o componente atual.
