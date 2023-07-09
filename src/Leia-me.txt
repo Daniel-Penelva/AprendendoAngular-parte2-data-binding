@@ -10,3 +10,27 @@ Tipos de Eventos no angular
 https://angular.io/guide/user-input#!#type-the--event
 
 Para usar o ngModel precisa importa a biblioteca FormsModel no app.module.ts.
+
+Criando um componente input-property
+Comando: ng g c input-property
+
+--------- // ------------
+
+A anotação @Input() é chamada de decorador e é usada em uma classe de componente do Angular para marcar uma propriedade 
+como uma propriedade de entrada. Isso permite que valores sejam passados para essa propriedade de fora do componente, 
+quando ele é utilizado em outro componente.
+
+No exemplo, temos a propriedade nome sendo declarada como uma propriedade de entrada. A propriedade nome é do tipo string 
+e é inicializada com um valor vazio ''.
+
+Ao marcar uma propriedade com @Input(), você permite que outros componentes utilizem esse componente e passem valores para 
+a propriedade nome. Por exemplo, você tem um componente chamado AppCurso com a propriedade nome declarada como uma 
+propriedade de entrada, estamos usando o componente da seguinte maneira:
+
+<app-curso [nome]="nomeCurso"> </app-curso>
+
+Nesse caso, nomeCurso é uma variável ou propriedade do componente atual que está sendo utilizado. O valor de nomeCurso 
+será passado para a propriedade nome do componente AppCurso.
+
+Essa capacidade de receber valores externos é uma das principais características do Angular e é usada para criar 
+componentes reutilizáveis e flexíveis, permitindo a comunicação entre os componentes por meio de propriedades de entrada.
