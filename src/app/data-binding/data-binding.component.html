@@ -1,4 +1,4 @@
-<section class="event-binding">
+<section class="two-way data binding">
   <!--<article>
       <h3>Interpolation / Interpolação</h3>
       <p>String rendenrizada com interpolação: {{ url }}</p>
@@ -43,18 +43,18 @@
     </div>
   </article>-->
 
-  <article>
+  <!--<article>
     <h3>Event-Binding</h3>
     <div>
       <button (click)="botaoClicado()" class="btn btn-primary">
         Me Clique!
       </button>
 
-      <br /><br />
+      <br /><br />-->
 
-      <!-- Passando os eventos para o método 
+  <!-- Passando os eventos para o método 
       (blur) - salva com o clique do mouse em qlq área do template -->
-      <input
+  <!--<input
         type="text"
         (keyup)="onKeyUp($event)"
         (keyup.enter)="salvarValor($event)"
@@ -70,5 +70,41 @@
             (mouseout)="onMouseOverOut()"
             [class.highlight]="isMouseOver"> Passe o mouse sobre mim </span>
     </div>
+  </article>-->
+
+  <article>
+    <h3>two-way data binding</h3>
+    <div>
+      <input type="text" 
+      [value]="nome"
+      (input)="nome = $any($event.target).value" />
+
+      <br>Exemplo2<br>
+
+      <input type="text" 
+      [ngModel]="nome"
+      (ngModelChange)="nome = $any($event)" />
+
+      <br>Exemplo3<br>
+
+      <!-- Lembrar da sintaxe: banana na caixa -->
+      <input type="text" [(ngModel)]="nome" />
+
+      <br>Exemplo4<br>
+
+      <!-- Utilizando o bind -->
+      <input type="text" bindon-ngModel="nome" />
+
+      <p>Você digitou: {{ nome }}</p>
+
+    </div>
+
+    <div>
+      <input type="text" [(ngModel)]="pessoa.nome" />
+      <input type="text" [(ngModel)]="pessoa.idade" />
+
+      <p>Meu nome é  {{ pessoa.nome }} e minha idade é {{pessoa.idade}}</p>
+    </div>
+
   </article>
 </section>

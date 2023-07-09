@@ -8,3 +8,5 @@ Inserir no final do body - JavaScript:
 
 Tipos de Eventos no angular
 https://angular.io/guide/user-input#!#type-the--event
+
+Para usar o ngModel precisa importa a biblioteca FormsModel no app.module.ts.
