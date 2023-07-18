@@ -18,6 +18,9 @@ export class DataBindingComponent implements OnInit {
   valorAtual: String = '';
   valorSalvo: string = '';
 
+  // Exemplo para output-property
+  valorInicial = 15;
+
   isMouseOver: boolean = false;
 
   nome: string = 'abc';
