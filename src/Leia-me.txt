@@ -81,3 +81,7 @@ Resumindo, o trecho de código `@ViewChild('campoInput', {static:false}) campoVa
 variável chamada `campoValorInput` que será usada para obter uma referência a um elemento do template com o seletor 
 `#campoInput`. A consulta para obter a referência será feita após a renderização do template (usando `{static:false}`), e 
 a variável será do tipo `ElementRef`, permitindo que o componente acesse e manipule diretamente esse elemento do DOM.
+
+-------- // ---------
+Nesse exemplo no console verá que terá o mesmo valor de saída tanto para incremento tanto para decremento, porém agora estamos 
+utilizando a referencia ao elemento que está no nosso html.
