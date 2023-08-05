@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -14,7 +14,11 @@ export class OutputPropertyComponent implements OnInit {
 
  @Output() mudouValor = new EventEmitter();
 
+ @ViewChild('campoInput', {static:false}) campoValorInput!: ElementRef;
+
   incrementa(){
+    console.log(this.campoValorInput);
+    
     this.valor++;
     this.mudouValor.emit({novoValor: this.valor})
   }

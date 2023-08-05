@@ -52,4 +52,32 @@ no HTML quanto em outros componentes que utilizam o componente atual.
 Vale ressaltar que é melhor usar o onInit() quando não tiver o input property e se tiver o input property usa-se o onChanges(), 
 uma vez que é ele que é disparado na mudança.
 
+-------- // ---------
 
+Como acessar a variavel "#campoInput" do componente input sem utilizar o ngModel ou sem utilizar o value. 
+Código:
+@ViewChild('campoInput', {static:false}) campoValorInput!: ElementRef;
+
+Esse script faz parte de uma aplicação Angular e envolve o uso do decorator `@ViewChild`. Vamos analisar parte por parte:
+
+1. `@ViewChild`: O decorator `@ViewChild` é fornecido pelo Angular e é usado para obter uma referência a um elemento ou 
+    diretiva dentro de um componente. Ele permite que o componente acesse e interaja com elementos do template ou diretivas 
+    filhas.
+
+2. `'campoInput'`: É o seletor que identifica o elemento ou diretiva que desejamos obter uma referência. Nesse caso, o 
+     seletor é o nome `campoInput`.
+
+3. `{static:false}`: O parâmetro `{static}` é opcional e determina quando a consulta (query) é executada. Se definido como 
+   `true`, a consulta é executada durante a fase de inicialização do componente, antes da renderização do template. Se 
+   definido como `false`, a consulta é executada após a renderização do template, durante a fase de detecção de mudanças 
+   (change detection).
+
+4. `campoValorInput!: ElementRef`: Aqui, estamos declarando uma variável chamada `campoValorInput` e usando o `!` para 
+    indicar que ela pode ser inicializada com um valor nulo ou indefinido. O tipo `ElementRef` é uma classe fornecida pelo 
+    Angular que representa uma referência a um elemento DOM nativo. `ElementRef` é usado quando você precisa acessar 
+    diretamente elementos do DOM em componentes.
+
+Resumindo, o trecho de código `@ViewChild('campoInput', {static:false}) campoValorInput!: ElementRef;` está declarando uma 
+variável chamada `campoValorInput` que será usada para obter uma referência a um elemento do template com o seletor 
+`#campoInput`. A consulta para obter a referência será feita após a renderização do template (usando `{static:false}`), e 
+a variável será do tipo `ElementRef`, permitindo que o componente acesse e manipule diretamente esse elemento do DOM.
