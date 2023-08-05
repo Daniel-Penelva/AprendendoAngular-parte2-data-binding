@@ -46,3 +46,10 @@ como 'nome'.
 
 Ao usar o alias de entrada, você pode usar o nome personalizado ao passar valores para a propriedade no componente, tanto 
 no HTML quanto em outros componentes que utilizam o componente atual.
+
+-------- // ---------
+
+Vale ressaltar que é melhor usar o onInit() quando não tiver o input property e se tiver o input property usa-se o onChanges(), 
+uma vez que é ele que é disparado na mudança.
+
+

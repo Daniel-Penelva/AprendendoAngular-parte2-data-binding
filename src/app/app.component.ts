@@ -9,4 +9,9 @@ export class AppComponent {
   title = 'data-binding';
 
   valor: number = 5;
+
+  mudarValor(){
+    this.valor++;
+  }
+
 }
