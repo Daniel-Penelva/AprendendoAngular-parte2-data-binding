@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, 
-  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ciclo',
@@ -13,6 +13,8 @@ AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   private log(hook: string){
     console.log(hook);
   }
+
+  @Input() valorInicial: number = 10;
   
   constructor() {
     this.log('constructor')
